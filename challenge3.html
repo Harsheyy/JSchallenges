@@ -18,15 +18,17 @@
         var nameError = document.getElementById("nameError");
         var AddrError = document.getElementById("addressError");
 
-        if(name == null || name == "" && addr == null || addr == ""){
+        console.log(name);
+        console.log(typeof(name))
+        if(name == "" && addr == ""){
           nameError.hidden = false;
           AddrError.hidden = false;
           return false;
-        } else if (name == null || name == ""){
+        } else if (name == ""){
           nameError.hidden = false;
           AddrError.hidden = true;
           return false;
-        } else if (addr == null || addr == ""){
+        } else if (addr == ""){
           nameError.hidden = true;
           AddrError.hidden = false;
           return false;
